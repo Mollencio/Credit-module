@@ -7,11 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary: #0d2137;
@@ -36,7 +32,6 @@
             min-height: 100vh;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
@@ -56,11 +51,7 @@
             justify-content: space-between;
         }
 
-        .header h1 {
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
+        .header h1 { font-size: 18px; font-weight: 600; letter-spacing: 0.5px; }
 
         .header-badge {
             background: rgba(201, 168, 76, 0.15);
@@ -74,12 +65,7 @@
             text-transform: uppercase;
         }
 
-        /* Progress bar */
-        .progress-container {
-            background: var(--primary);
-            padding: 0;
-            height: 4px;
-        }
+        .progress-container { background: var(--primary); height: 4px; }
 
         .progress-bar {
             height: 100%;
@@ -89,14 +75,8 @@
             border-radius: 0 2px 2px 0;
         }
 
-        /* Main container */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 24px;
-        }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
 
-        /* Cards */
         .card {
             background: var(--white);
             border-radius: 12px;
@@ -105,39 +85,18 @@
             border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
-        /* Welcome screen */
         .welcome-icon {
-            width: 80px;
-            height: 80px;
+            width: 80px; height: 80px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin: 0 auto 24px;
             border: 3px solid var(--gold);
         }
+        .welcome-icon svg { width: 40px; height: 40px; fill: var(--gold); }
 
-        .welcome-icon svg {
-            width: 40px;
-            height: 40px;
-            fill: var(--gold);
-        }
-
-        .welcome-title {
-            text-align: center;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .welcome-subtitle {
-            text-align: center;
-            font-size: 15px;
-            color: var(--gray);
-            margin-bottom: 32px;
-        }
+        .welcome-title { text-align: center; font-size: 26px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .welcome-subtitle { text-align: center; font-size: 15px; color: var(--gray); margin-bottom: 32px; }
 
         .info-block {
             background: rgba(13, 33, 55, 0.04);
@@ -146,437 +105,185 @@
             border-radius: 0 8px 8px 0;
             margin-bottom: 16px;
         }
-
-        .info-block h3 {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 6px;
-        }
-
-        .info-block p {
-            font-size: 13px;
-            color: #555;
-            line-height: 1.6;
-        }
+        .info-block h3 { font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+        .info-block p { font-size: 13px; color: #555; line-height: 1.6; }
 
         .confidential-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: flex; align-items: center; gap: 8px;
             background: rgba(46, 125, 50, 0.08);
             border: 1px solid rgba(46, 125, 50, 0.2);
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin: 24px 0;
+            padding: 12px 16px; border-radius: 8px; margin: 24px 0;
         }
+        .confidential-badge svg { width: 20px; height: 20px; fill: var(--success); flex-shrink: 0; }
+        .confidential-badge span { font-size: 13px; color: var(--success); font-weight: 500; }
 
-        .confidential-badge svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--success);
-            flex-shrink: 0;
-        }
-
-        .confidential-badge span {
-            font-size: 13px;
-            color: var(--success);
-            font-weight: 500;
-        }
-
-        /* Section header */
         .section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 28px;
-            padding-bottom: 16px;
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 28px; padding-bottom: 16px;
             border-bottom: 2px solid var(--gray-light);
         }
 
         .section-number {
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            font-weight: 700;
-            flex-shrink: 0;
+            color: var(--gold); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; font-weight: 700; flex-shrink: 0;
         }
+        .section-info h2 { font-size: 20px; font-weight: 700; color: var(--primary); }
+        .section-info p { font-size: 13px; color: var(--gray); margin-top: 2px; }
 
-        .section-info h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .section-info p {
-            font-size: 13px;
-            color: var(--gray);
-            margin-top: 2px;
-        }
-
-        /* Questions */
-        .question-block {
-            margin-bottom: 32px;
-        }
-
-        .question-label {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 4px;
-            line-height: 1.5;
-        }
-
-        .question-description {
-            font-size: 13px;
-            color: var(--gray);
-            margin-bottom: 14px;
-            line-height: 1.5;
-        }
+        .question-block { margin-bottom: 32px; }
+        .question-label { font-size: 15px; font-weight: 600; color: var(--primary); margin-bottom: 4px; line-height: 1.5; }
+        .question-description { font-size: 13px; color: var(--gray); margin-bottom: 14px; line-height: 1.5; }
 
         .question-scenario {
             background: rgba(13, 33, 55, 0.03);
             border: 1px solid rgba(13, 33, 55, 0.08);
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 16px;
-            font-size: 14px;
-            line-height: 1.7;
-            color: #333;
+            border-radius: 8px; padding: 16px; margin-bottom: 16px;
+            font-size: 14px; line-height: 1.7; color: #333;
         }
+        .question-scenario strong { color: var(--primary); }
 
-        .question-scenario strong {
-            color: var(--primary);
-        }
-
-        /* Radio options */
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .option-item {
-            position: relative;
-        }
-
-        .option-item input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+        .options-list { display: flex; flex-direction: column; gap: 10px; }
+        .option-item { position: relative; }
+        .option-item input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
 
         .option-item label {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 14px 16px;
-            border: 2px solid #e0e4ea;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
+            display: flex; align-items: flex-start; gap: 12px;
+            padding: 14px 16px; border: 2px solid #e0e4ea; border-radius: 10px;
+            cursor: pointer; transition: all 0.2s ease;
+            font-size: 14px; line-height: 1.5; color: #333;
         }
-
-        .option-item label:hover {
-            border-color: var(--primary-medium);
-            background: rgba(13, 33, 55, 0.02);
-        }
-
-        .option-item input[type="radio"]:checked + label {
-            border-color: var(--gold);
-            background: rgba(201, 168, 76, 0.06);
-        }
+        .option-item label:hover { border-color: var(--primary-medium); background: rgba(13, 33, 55, 0.02); }
+        .option-item input[type="radio"]:checked + label { border-color: var(--gold); background: rgba(201, 168, 76, 0.06); }
 
         .radio-circle {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #c0c8d4;
-            border-radius: 50%;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            margin-top: 1px;
+            width: 20px; height: 20px; border: 2px solid #c0c8d4; border-radius: 50%;
+            flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s ease; margin-top: 1px;
         }
+        .option-item input[type="radio"]:checked + label .radio-circle { border-color: var(--gold); background: var(--gold); }
+        .radio-circle::after { content: ''; width: 8px; height: 8px; background: var(--white); border-radius: 50%; opacity: 0; transition: opacity 0.2s ease; }
+        .option-item input[type="radio"]:checked + label .radio-circle::after { opacity: 1; }
 
-        .option-item input[type="radio"]:checked + label .radio-circle {
-            border-color: var(--gold);
-            background: var(--gold);
-        }
-
-        .radio-circle::after {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--white);
-            border-radius: 50%;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .option-item input[type="radio"]:checked + label .radio-circle::after {
-            opacity: 1;
-        }
-
-        /* Buttons */
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: inherit;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 14px 32px; border: none; border-radius: 8px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s ease; font-family: inherit;
         }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--gold-dark), var(--gold));
             color: var(--primary);
             box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
         }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 16px rgba(201, 168, 76, 0.4);
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--primary);
-            border: 2px solid #d0d5dd;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary-medium);
-        }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(201, 168, 76, 0.4); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 2px solid #d0d5dd; }
+        .btn-secondary:hover { border-color: var(--primary-medium); }
+        .btn-telegram { background: #2AABEE; color: white; }
+        .btn-telegram:hover { background: #229ED9; transform: translateY(-1px); }
 
         .btn-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid var(--gray-light);
+            display: flex; justify-content: space-between; align-items: center;
+            margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--gray-light);
         }
 
-        /* Screen visibility */
-        .screen {
-            display: none;
-        }
-
-        .screen.active {
-            display: block;
-            animation: fadeIn 0.4s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .screen { display: none; }
+        .screen.active { display: block; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         /* Results */
-        .result-hero {
-            text-align: center;
-            padding: 32px 0;
-        }
+        .result-hero { text-align: center; padding: 32px 0; }
 
         .result-score-circle {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
+            width: 160px; height: 160px; border-radius: 50%;
             margin: 0 auto 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
             position: relative;
         }
-
-        .result-score-circle::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            border: 6px solid var(--gray-light);
-        }
-
+        .result-score-circle::before { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 6px solid var(--gray-light); }
         .result-score-circle.level-high::before { border-color: var(--success); }
         .result-score-circle.level-medium::before { border-color: var(--gold); }
         .result-score-circle.level-low::before { border-color: var(--danger); }
-
-        .result-score-number {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1;
-        }
-
+        .result-score-number { font-size: 48px; font-weight: 700; line-height: 1; }
         .level-high .result-score-number { color: var(--success); }
         .level-medium .result-score-number { color: var(--gold-dark); }
         .level-low .result-score-number { color: var(--danger); }
-
-        .result-score-label {
-            font-size: 14px;
-            color: var(--gray);
-            margin-top: 4px;
-        }
-
-        .result-level-badge {
-            display: inline-block;
-            padding: 8px 24px;
-            border-radius: 24px;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
+        .result-score-label { font-size: 14px; color: var(--gray); margin-top: 4px; }
+        .result-level-badge { display: inline-block; padding: 8px 24px; border-radius: 24px; font-size: 16px; font-weight: 600; }
         .level-high .result-level-badge { background: rgba(46,125,50,0.1); color: var(--success); }
         .level-medium .result-level-badge { background: rgba(201,168,76,0.15); color: var(--gold-dark); }
         .level-low .result-level-badge { background: rgba(198,40,40,0.1); color: var(--danger); }
 
-        /* Section scores */
-        .section-scores {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 32px 0;
-        }
-
-        .section-score-card {
-            background: var(--gray-light);
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .section-score-card h4 {
-            font-size: 13px;
-            color: var(--gray);
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .section-score-bar {
-            height: 8px;
-            background: #dce0e6;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 8px;
-        }
-
-        .section-score-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 1s ease;
-        }
-
+        .section-scores { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+        .section-score-card { background: var(--gray-light); border-radius: 10px; padding: 20px; }
+        .section-score-card h4 { font-size: 13px; color: var(--gray); font-weight: 500; margin-bottom: 8px; }
+        .section-score-bar { height: 8px; background: #dce0e6; border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
+        .section-score-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
         .fill-high { background: var(--success); }
         .fill-medium { background: var(--gold); }
         .fill-low { background: var(--danger); }
+        .section-score-value { font-size: 20px; font-weight: 700; color: var(--primary); }
+        .section-score-value span { font-size: 13px; font-weight: 400; color: var(--gray); }
 
-        .section-score-value {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .section-score-value span {
-            font-size: 13px;
-            font-weight: 400;
-            color: var(--gray);
-        }
-
-        /* Recommendations */
-        .recommendations {
-            margin-top: 32px;
-        }
-
-        .recommendations h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--gray-light);
-        }
-
-        .rec-block {
-            margin-bottom: 24px;
-            border-left: 4px solid var(--gold);
-            padding-left: 20px;
-        }
-
-        .rec-block h4 {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .rec-block ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .rec-block ul li {
-            font-size: 14px;
-            color: #444;
-            line-height: 1.6;
-            padding: 4px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .rec-block ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-            font-weight: 600;
-        }
-
+        .recommendations { margin-top: 32px; }
+        .recommendations h3 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-light); }
+        .rec-block { margin-bottom: 24px; border-left: 4px solid var(--gold); padding-left: 20px; }
+        .rec-block h4 { font-size: 15px; font-weight: 600; color: var(--primary); margin-bottom: 10px; }
+        .rec-block ul { list-style: none; padding: 0; }
+        .rec-block ul li { font-size: 14px; color: #444; line-height: 1.6; padding: 4px 0 4px 20px; position: relative; }
+        .rec-block ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
         .rec-block.rec-critical { border-left-color: var(--danger); }
         .rec-block.rec-warning { border-left-color: var(--warning); }
         .rec-block.rec-good { border-left-color: var(--success); }
 
-        /* Validation error */
-        .validation-error {
-            color: var(--danger);
-            font-size: 13px;
-            margin-top: 8px;
-            display: none;
-        }
+        /* Feedback per question */
+        .feedback-section { margin-top: 32px; }
+        .feedback-section h3 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-light); }
+        .feedback-toggle { font-size: 13px; color: var(--gold-dark); cursor: pointer; font-weight: 500; margin-bottom: 16px; display: inline-block; }
+        .feedback-toggle:hover { text-decoration: underline; }
 
-        .question-block.has-error .validation-error {
-            display: block;
+        .feedback-list { display: flex; flex-direction: column; gap: 12px; }
+        .feedback-item {
+            border-radius: 10px; padding: 16px; font-size: 13px; line-height: 1.6;
+            border: 1px solid;
         }
+        .feedback-item.correct { background: rgba(46,125,50,0.04); border-color: rgba(46,125,50,0.2); }
+        .feedback-item.wrong { background: rgba(198,40,40,0.04); border-color: rgba(198,40,40,0.2); }
+        .feedback-item .fb-header { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+        .feedback-item .fb-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+        .feedback-item .fb-question { font-weight: 600; color: var(--primary); font-size: 14px; }
+        .feedback-item .fb-answer { margin-top: 6px; }
+        .feedback-item .fb-answer .label { font-weight: 500; color: var(--gray); }
+        .feedback-item .fb-correct { color: var(--success); font-weight: 500; }
+        .feedback-item .fb-user-wrong { color: var(--danger); font-weight: 500; }
+        .feedback-item .fb-explanation { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.06); color: #555; }
 
-        .question-block.has-error .options-list .option-item label {
-            border-color: rgba(198, 40, 40, 0.3);
+        /* Report section */
+        .report-section { margin-top: 32px; padding-top: 24px; border-top: 2px solid var(--gray-light); }
+        .report-section h3 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
+        .report-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+        .report-textarea {
+            width: 100%; min-height: 200px; padding: 16px;
+            border: 1px solid #d0d5dd; border-radius: 8px;
+            font-family: monospace; font-size: 12px; line-height: 1.5;
+            color: #333; background: var(--gray-light); resize: vertical;
         }
+        .copy-notification {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+            background: var(--primary); color: var(--white); padding: 12px 24px;
+            border-radius: 8px; font-size: 14px; font-weight: 500;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            opacity: 0; transition: opacity 0.3s ease; pointer-events: none; z-index: 999;
+        }
+        .copy-notification.show { opacity: 1; }
 
-        /* Responsive */
+        .validation-error { color: var(--danger); font-size: 13px; margin-top: 8px; display: none; }
+        .question-block.has-error .validation-error { display: block; }
+        .question-block.has-error .options-list .option-item label { border-color: rgba(198, 40, 40, 0.3); }
+
         @media (max-width: 640px) {
             .card { padding: 24px 20px; }
             .container { padding: 0 16px; margin: 24px auto; }
@@ -585,11 +292,12 @@
             .header h1 { font-size: 14px; }
             .btn-group { flex-direction: column-reverse; gap: 12px; }
             .btn-group .btn { width: 100%; }
+            .report-actions { flex-direction: column; }
+            .report-actions .btn { width: 100%; }
         }
 
-        /* Print styles for results */
         @media print {
-            .header, .progress-container, .btn-group { display: none; }
+            .header, .progress-container, .btn-group, .report-section, .report-actions { display: none; }
             .card { box-shadow: none; border: 1px solid #ccc; }
         }
     </style>
@@ -608,7 +316,7 @@
 
 <div class="container">
 
-    <!-- ========== ЭКРАН 0: ПРИВЕТСТВИЕ ========== -->
+    <!-- ЭКРАН 0: ПРИВЕТСТВИЕ -->
     <div class="screen active" id="screen-welcome">
         <div class="card">
             <div class="welcome-icon">
@@ -616,148 +324,72 @@
             </div>
             <h2 class="welcome-title">Оценка кредитной грамотности военнослужащих</h2>
             <p class="welcome-subtitle">Комплексный диагностический модуль</p>
-
-            <div class="info-block">
-                <h3>Цель модуля</h3>
-                <p>Определить уровень ваших знаний и навыков в области кредитования, выявить зоны для развития и предоставить персональные рекомендации.</p>
-            </div>
-
-            <div class="info-block">
-                <h3>Структура</h3>
-                <p>Модуль состоит из 5 разделов: анкетирование, тесты на расчёт ПСК, анализ графиков платежей, распознавание мошенничества и кейс-задачи. Прохождение займёт 15–20 минут.</p>
-            </div>
-
-            <div class="info-block">
-                <h3>Система оценки</h3>
-                <p>Максимальный балл — 100. По итогам вы получите оценку уровня грамотности и индивидуальный пакет рекомендаций по каждому разделу.</p>
-            </div>
-
+            <div class="info-block"><h3>Цель модуля</h3><p>Определить уровень ваших знаний и навыков в области кредитования, выявить зоны для развития и предоставить персональные рекомендации.</p></div>
+            <div class="info-block"><h3>Структура</h3><p>Модуль состоит из 5 разделов: анкетирование, тесты на расчёт ПСК, анализ графиков платежей, распознавание мошенничества и кейс-задачи. Прохождение займёт 15-20 минут.</p></div>
+            <div class="info-block"><h3>Система оценки</h3><p>По итогам вы получите оценку уровня грамотности, детальный разбор каждого ответа и индивидуальный пакет рекомендаций. Результаты можно отправить ИИ-консультанту для персонализированной помощи.</p></div>
             <div class="confidential-badge">
                 <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
                 <span>Все данные обрабатываются локально. Ваши ответы не передаются на сервер и не сохраняются.</span>
             </div>
-
             <div style="text-align: center; margin-top: 24px;">
                 <button class="btn btn-primary" onclick="startModule()">Начать оценку</button>
             </div>
         </div>
     </div>
 
-    <!-- ========== ЭКРАН 1: АНКЕТИРОВАНИЕ ========== -->
+    <!-- ЭКРАН 1: АНКЕТИРОВАНИЕ -->
     <div class="screen" id="screen-survey">
         <div class="card">
             <div class="section-header">
                 <div class="section-number">1</div>
-                <div class="section-info">
-                    <h2>Анкетирование</h2>
-                    <p>Самооценка финансовых знаний и опыта — 5 вопросов</p>
-                </div>
+                <div class="section-info"><h2>Анкетирование</h2><p>Самооценка финансовых знаний и опыта — 5 вопросов</p></div>
             </div>
-
-            <!-- Q1 (информационный, не оценивается) -->
             <div class="question-block" data-question="s1">
                 <div class="question-label">1. Каков ваш опыт взаимодействия с кредитными продуктами?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="s1" id="s1a" value="0">
-                        <label for="s1a"><span class="radio-circle"></span>Имею один или несколько активных кредитов</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s1" id="s1b" value="0">
-                        <label for="s1b"><span class="radio-circle"></span>Кредиты были ранее, сейчас закрыты</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s1" id="s1c" value="0">
-                        <label for="s1c"><span class="radio-circle"></span>Не брал(а) кредитов, но рассматриваю возможность</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s1" id="s1d" value="0">
-                        <label for="s1d"><span class="radio-circle"></span>Не имею кредитного опыта</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="s1" id="s1a" value="0"><label for="s1a"><span class="radio-circle"></span>Имею один или несколько активных кредитов</label></div>
+                    <div class="option-item"><input type="radio" name="s1" id="s1b" value="0"><label for="s1b"><span class="radio-circle"></span>Кредиты были ранее, сейчас закрыты</label></div>
+                    <div class="option-item"><input type="radio" name="s1" id="s1c" value="0"><label for="s1c"><span class="radio-circle"></span>Не брал(а) кредитов, но рассматриваю возможность</label></div>
+                    <div class="option-item"><input type="radio" name="s1" id="s1d" value="0"><label for="s1d"><span class="radio-circle"></span>Не имею кредитного опыта</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Q2: Знание ПСК -->
             <div class="question-block" data-question="s2" data-section="survey">
                 <div class="question-label">2. Знаете ли вы, что такое полная стоимость кредита (ПСК) и как она рассчитывается?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="s2" id="s2a" value="4">
-                        <label for="s2a"><span class="radio-circle"></span>Да, хорошо понимаю и могу объяснить</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s2" id="s2b" value="2">
-                        <label for="s2b"><span class="radio-circle"></span>Имею общее представление</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s2" id="s2c" value="0">
-                        <label for="s2c"><span class="radio-circle"></span>Нет, не знаю</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="s2" id="s2a" value="4"><label for="s2a"><span class="radio-circle"></span>Да, хорошо понимаю и могу объяснить</label></div>
+                    <div class="option-item"><input type="radio" name="s2" id="s2b" value="2"><label for="s2b"><span class="radio-circle"></span>Имею общее представление</label></div>
+                    <div class="option-item"><input type="radio" name="s2" id="s2c" value="0"><label for="s2c"><span class="radio-circle"></span>Нет, не знаю</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Q3: Графики платежей -->
             <div class="question-block" data-question="s3" data-section="survey">
                 <div class="question-label">3. Умеете ли вы различать аннуитетный и дифференцированный графики платежей?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="s3" id="s3a" value="4">
-                        <label for="s3a"><span class="radio-circle"></span>Да, свободно разбираюсь в обоих типах</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s3" id="s3b" value="2">
-                        <label for="s3b"><span class="radio-circle"></span>Примерно понимаю разницу</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s3" id="s3c" value="0">
-                        <label for="s3c"><span class="radio-circle"></span>Нет, не разбираюсь</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="s3" id="s3a" value="4"><label for="s3a"><span class="radio-circle"></span>Да, свободно разбираюсь в обоих типах</label></div>
+                    <div class="option-item"><input type="radio" name="s3" id="s3b" value="2"><label for="s3b"><span class="radio-circle"></span>Примерно понимаю разницу</label></div>
+                    <div class="option-item"><input type="radio" name="s3" id="s3c" value="0"><label for="s3c"><span class="radio-circle"></span>Нет, не разбираюсь</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Q4: 377-ФЗ -->
             <div class="question-block" data-question="s4" data-section="survey">
                 <div class="question-label">4. Знаете ли вы о праве военнослужащих на кредитные каникулы (377-ФЗ)?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="s4" id="s4a" value="4">
-                        <label for="s4a"><span class="radio-circle"></span>Да, знаю условия и порядок оформления</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s4" id="s4b" value="2">
-                        <label for="s4b"><span class="radio-circle"></span>Слышал(а), но не знаю деталей</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s4" id="s4c" value="0">
-                        <label for="s4c"><span class="radio-circle"></span>Нет, не знаю о такой возможности</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="s4" id="s4a" value="4"><label for="s4a"><span class="radio-circle"></span>Да, знаю условия и порядок оформления</label></div>
+                    <div class="option-item"><input type="radio" name="s4" id="s4b" value="2"><label for="s4b"><span class="radio-circle"></span>Слышал(а), но не знаю деталей</label></div>
+                    <div class="option-item"><input type="radio" name="s4" id="s4c" value="0"><label for="s4c"><span class="radio-circle"></span>Нет, не знаю о такой возможности</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Q5: 391-ФЗ и инструменты -->
             <div class="question-block" data-question="s5" data-section="survey">
                 <div class="question-label">5. Знаете ли вы о возможности прекращения кредитных обязательств для военнослужащих (391-ФЗ)?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="s5" id="s5a" value="4">
-                        <label for="s5a"><span class="radio-circle"></span>Да, знаю условия применения</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s5" id="s5b" value="2">
-                        <label for="s5b"><span class="radio-circle"></span>Слышал(а), но не разбираюсь в деталях</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="s5" id="s5c" value="0">
-                        <label for="s5c"><span class="radio-circle"></span>Нет, впервые слышу</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="s5" id="s5a" value="4"><label for="s5a"><span class="radio-circle"></span>Да, знаю условия применения</label></div>
+                    <div class="option-item"><input type="radio" name="s5" id="s5b" value="2"><label for="s5b"><span class="radio-circle"></span>Слышал(а), но не разбираюсь в деталях</label></div>
+                    <div class="option-item"><input type="radio" name="s5" id="s5c" value="0"><label for="s5c"><span class="radio-circle"></span>Нет, впервые слышу</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="goBack()">Назад</button>
                 <button class="btn btn-primary" onclick="goNext()">Далее</button>
@@ -765,122 +397,57 @@
         </div>
     </div>
 
-    <!-- ========== ЭКРАН 2: ТЕСТ — ПСК ========== -->
+    <!-- ЭКРАН 2: ПСК -->
     <div class="screen" id="screen-psk">
         <div class="card">
             <div class="section-header">
                 <div class="section-number">2</div>
-                <div class="section-info">
-                    <h2>Тест: Полная стоимость кредита</h2>
-                    <p>Практические задания на расчёт и анализ ПСК — 4 вопроса</p>
-                </div>
+                <div class="section-info"><h2>Тест: Полная стоимость кредита</h2><p>Практические задания на расчёт и анализ ПСК — 4 вопроса</p></div>
             </div>
-
-            <!-- PSK Q1 -->
             <div class="question-block" data-question="p1" data-section="psk">
                 <div class="question-label">1. Сравните два кредитных предложения:</div>
-                <div class="question-scenario">
-                    <strong>Кредит А:</strong> 500 000 ₽ на 3 года, ставка <strong>12% годовых</strong>, без дополнительных комиссий и страховок.<br><br>
-                    <strong>Кредит Б:</strong> 500 000 ₽ на 3 года, ставка <strong>10% годовых</strong> + комиссия за выдачу <strong>2%</strong> от суммы кредита + ежегодная страховка <strong>1,5%</strong> от остатка долга.
-                </div>
+                <div class="question-scenario"><strong>Кредит А:</strong> 500 000 ₽ на 3 года, ставка <strong>12% годовых</strong>, без дополнительных комиссий и страховок.<br><br><strong>Кредит Б:</strong> 500 000 ₽ на 3 года, ставка <strong>10% годовых</strong> + комиссия за выдачу <strong>2%</strong> от суммы кредита + ежегодная страховка <strong>1,5%</strong> от остатка долга.</div>
                 <div class="question-label" style="font-size:14px;">Какой кредит обойдётся дешевле по полной стоимости?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="p1" id="p1a" value="5">
-                        <label for="p1a"><span class="radio-circle"></span>Кредит А — несмотря на более высокую ставку, отсутствие скрытых платежей делает его выгоднее</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p1" id="p1b" value="0">
-                        <label for="p1b"><span class="radio-circle"></span>Кредит Б — ставка ниже, значит он выгоднее</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p1" id="p1c" value="0">
-                        <label for="p1c"><span class="radio-circle"></span>Они примерно одинаковы по стоимости</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p1" id="p1d" value="0">
-                        <label for="p1d"><span class="radio-circle"></span>Невозможно определить без специального калькулятора</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="p1" id="p1a" value="5"><label for="p1a"><span class="radio-circle"></span>Кредит А — несмотря на более высокую ставку, отсутствие скрытых платежей делает его выгоднее</label></div>
+                    <div class="option-item"><input type="radio" name="p1" id="p1b" value="0"><label for="p1b"><span class="radio-circle"></span>Кредит Б — ставка ниже, значит он выгоднее</label></div>
+                    <div class="option-item"><input type="radio" name="p1" id="p1c" value="0"><label for="p1c"><span class="radio-circle"></span>Они примерно одинаковы по стоимости</label></div>
+                    <div class="option-item"><input type="radio" name="p1" id="p1d" value="0"><label for="p1d"><span class="radio-circle"></span>Невозможно определить без специального калькулятора</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- PSK Q2 -->
             <div class="question-block" data-question="p2" data-section="psk">
                 <div class="question-label">2. Что из перечисленного НЕ включается в расчёт полной стоимости кредита (ПСК)?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="p2" id="p2a" value="0">
-                        <label for="p2a"><span class="radio-circle"></span>Проценты по кредиту</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p2" id="p2b" value="0">
-                        <label for="p2b"><span class="radio-circle"></span>Комиссия за открытие и ведение счёта</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p2" id="p2c" value="5">
-                        <label for="p2c"><span class="radio-circle"></span>Штрафы и пени за просрочку платежей</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p2" id="p2d" value="0">
-                        <label for="p2d"><span class="radio-circle"></span>Стоимость обязательного страхования</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="p2" id="p2a" value="0"><label for="p2a"><span class="radio-circle"></span>Проценты по кредиту</label></div>
+                    <div class="option-item"><input type="radio" name="p2" id="p2b" value="0"><label for="p2b"><span class="radio-circle"></span>Комиссия за открытие и ведение счёта</label></div>
+                    <div class="option-item"><input type="radio" name="p2" id="p2c" value="5"><label for="p2c"><span class="radio-circle"></span>Штрафы и пени за просрочку платежей</label></div>
+                    <div class="option-item"><input type="radio" name="p2" id="p2d" value="0"><label for="p2d"><span class="radio-circle"></span>Стоимость обязательного страхования</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- PSK Q3 -->
             <div class="question-block" data-question="p3" data-section="psk">
                 <div class="question-label">3. Банк предлагает кредит 300 000 ₽ под 9,9% годовых на 2 года. Обязательное условие — страхование жизни за 35 000 ₽. Как это повлияет на ПСК?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="p3" id="p3a" value="0">
-                        <label for="p3a"><span class="radio-circle"></span>ПСК не изменится — страховка оформляется отдельным договором</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p3" id="p3b" value="5">
-                        <label for="p3b"><span class="radio-circle"></span>ПСК увеличится — обязательная страховка включается в расчёт полной стоимости</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p3" id="p3c" value="0">
-                        <label for="p3c"><span class="radio-circle"></span>ПСК уменьшится — страховка снижает банковский риск и процент</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p3" id="p3d" value="0">
-                        <label for="p3d"><span class="radio-circle"></span>Зависит от типа страховки — нельзя определить однозначно</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="p3" id="p3a" value="0"><label for="p3a"><span class="radio-circle"></span>ПСК не изменится — страховка оформляется отдельным договором</label></div>
+                    <div class="option-item"><input type="radio" name="p3" id="p3b" value="5"><label for="p3b"><span class="radio-circle"></span>ПСК увеличится — обязательная страховка включается в расчёт полной стоимости</label></div>
+                    <div class="option-item"><input type="radio" name="p3" id="p3c" value="0"><label for="p3c"><span class="radio-circle"></span>ПСК уменьшится — страховка снижает банковский риск и процент</label></div>
+                    <div class="option-item"><input type="radio" name="p3" id="p3d" value="0"><label for="p3d"><span class="radio-circle"></span>Зависит от типа страховки — нельзя определить однозначно</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- PSK Q4 -->
             <div class="question-block" data-question="p4" data-section="psk">
                 <div class="question-label">4. Ситуация из практики:</div>
-                <div class="question-scenario">
-                    Военнослужащий перед командировкой оформляет кредит. Сотрудник банка сообщает: <em>«Ставка 8,5% годовых — очень выгодное предложение, подписывайте быстрее, завтра условия могут измениться»</em>. При внимательном изучении договора обнаруживается: ежегодная комиссия за обслуживание счёта <strong>1,2%</strong> и стоимость страхового пакета <strong>2,3%</strong> от суммы кредита.
-                </div>
+                <div class="question-scenario">Военнослужащий перед командировкой оформляет кредит. Сотрудник банка сообщает: <em>«Ставка 8,5% годовых — очень выгодное предложение, подписывайте быстрее, завтра условия могут измениться»</em>. При внимательном изучении договора обнаруживается: ежегодная комиссия за обслуживание счёта <strong>1,2%</strong> и стоимость страхового пакета <strong>2,3%</strong> от суммы кредита.</div>
                 <div class="question-label" style="font-size:14px;">Какова реальная стоимость этого кредита?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="p4" id="p4a" value="0">
-                        <label for="p4a"><span class="radio-circle"></span>8,5% — как указал сотрудник банка</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p4" id="p4b" value="5">
-                        <label for="p4b"><span class="radio-circle"></span>Значительно выше 8,5% — скрытые комиссии и страховка увеличивают ПСК</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p4" id="p4c" value="0">
-                        <label for="p4c"><span class="radio-circle"></span>Ниже 8,5% — комиссии уже включены в ставку</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="p4" id="p4d" value="0">
-                        <label for="p4d"><span class="radio-circle"></span>Точно 8,5% — банк обязан указывать реальную ставку</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="p4" id="p4a" value="0"><label for="p4a"><span class="radio-circle"></span>8,5% — как указал сотрудник банка</label></div>
+                    <div class="option-item"><input type="radio" name="p4" id="p4b" value="5"><label for="p4b"><span class="radio-circle"></span>Значительно выше 8,5% — скрытые комиссии и страховка увеличивают ПСК</label></div>
+                    <div class="option-item"><input type="radio" name="p4" id="p4c" value="0"><label for="p4c"><span class="radio-circle"></span>Ниже 8,5% — комиссии уже включены в ставку</label></div>
+                    <div class="option-item"><input type="radio" name="p4" id="p4d" value="0"><label for="p4d"><span class="radio-circle"></span>Точно 8,5% — банк обязан указывать реальную ставку</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="goBack()">Назад</button>
                 <button class="btn btn-primary" onclick="goNext()">Далее</button>
@@ -888,123 +455,57 @@
         </div>
     </div>
 
-    <!-- ========== ЭКРАН 3: ТЕСТ — ГРАФИКИ ПЛАТЕЖЕЙ ========== -->
+    <!-- ЭКРАН 3: ГРАФИКИ ПЛАТЕЖЕЙ -->
     <div class="screen" id="screen-schedule">
         <div class="card">
             <div class="section-header">
                 <div class="section-number">3</div>
-                <div class="section-info">
-                    <h2>Тест: Анализ графиков платежей</h2>
-                    <p>Понимание схем погашения и управление платежами — 4 вопроса</p>
-                </div>
+                <div class="section-info"><h2>Тест: Анализ графиков платежей</h2><p>Понимание схем погашения и управление платежами — 4 вопроса</p></div>
             </div>
-
-            <!-- Schedule Q1 -->
             <div class="question-block" data-question="g1" data-section="schedule">
                 <div class="question-label">1. Чем аннуитетный платёж отличается от дифференцированного?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="g1" id="g1a" value="5">
-                        <label for="g1a"><span class="radio-circle"></span>Аннуитетный — одинаковая сумма каждый месяц; дифференцированный — сумма уменьшается со временем</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g1" id="g1b" value="0">
-                        <label for="g1b"><span class="radio-circle"></span>Дифференцированный — фиксированная сумма; аннуитетный — сумма увеличивается</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g1" id="g1c" value="0">
-                        <label for="g1c"><span class="radio-circle"></span>Принципиальной разницы нет — оба типа приводят к одинаковой переплате</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g1" id="g1d" value="0">
-                        <label for="g1d"><span class="radio-circle"></span>Аннуитетный всегда выгоднее для заёмщика</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="g1" id="g1a" value="5"><label for="g1a"><span class="radio-circle"></span>Аннуитетный — одинаковая сумма каждый месяц; дифференцированный — сумма уменьшается со временем</label></div>
+                    <div class="option-item"><input type="radio" name="g1" id="g1b" value="0"><label for="g1b"><span class="radio-circle"></span>Дифференцированный — фиксированная сумма; аннуитетный — сумма увеличивается</label></div>
+                    <div class="option-item"><input type="radio" name="g1" id="g1c" value="0"><label for="g1c"><span class="radio-circle"></span>Принципиальной разницы нет — оба типа приводят к одинаковой переплате</label></div>
+                    <div class="option-item"><input type="radio" name="g1" id="g1d" value="0"><label for="g1d"><span class="radio-circle"></span>Аннуитетный всегда выгоднее для заёмщика</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Schedule Q2 -->
             <div class="question-block" data-question="g2" data-section="schedule">
                 <div class="question-label">2. Расчётная задача:</div>
-                <div class="question-scenario">
-                    Кредит: <strong>1 000 000 ₽</strong> на <strong>5 лет</strong>.<br>
-                    Тип платежа: аннуитетный.<br>
-                    Ежемесячный платёж: <strong>22 244 ₽</strong>.
-                </div>
+                <div class="question-scenario">Кредит: <strong>1 000 000 ₽</strong> на <strong>5 лет</strong>.<br>Тип платежа: аннуитетный.<br>Ежемесячный платёж: <strong>22 244 ₽</strong>.</div>
                 <div class="question-label" style="font-size:14px;">Какова общая переплата за весь срок кредита?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="g2" id="g2a" value="0">
-                        <label for="g2a"><span class="radio-circle"></span>~134 000 ₽</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g2" id="g2b" value="5">
-                        <label for="g2b"><span class="radio-circle"></span>~335 000 ₽</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g2" id="g2c" value="0">
-                        <label for="g2c"><span class="radio-circle"></span>~535 000 ₽</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g2" id="g2d" value="0">
-                        <label for="g2d"><span class="radio-circle"></span>~222 000 ₽</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="g2" id="g2a" value="0"><label for="g2a"><span class="radio-circle"></span>~134 000 ₽</label></div>
+                    <div class="option-item"><input type="radio" name="g2" id="g2b" value="5"><label for="g2b"><span class="radio-circle"></span>~335 000 ₽</label></div>
+                    <div class="option-item"><input type="radio" name="g2" id="g2c" value="0"><label for="g2c"><span class="radio-circle"></span>~535 000 ₽</label></div>
+                    <div class="option-item"><input type="radio" name="g2" id="g2d" value="0"><label for="g2d"><span class="radio-circle"></span>~222 000 ₽</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Schedule Q3 -->
             <div class="question-block" data-question="g3" data-section="schedule">
                 <div class="question-label">3. Вы взяли аннуитетный кредит на 5 лет и решили погасить его досрочно через 3 года. Какова особенность аннуитетной схемы?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="g3" id="g3a" value="0">
-                        <label for="g3a"><span class="radio-circle"></span>Вы сэкономите ровно 40% от общей суммы процентов</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g3" id="g3b" value="5">
-                        <label for="g3b"><span class="radio-circle"></span>Большая часть процентов уже выплачена в первые годы — экономия будет меньше ожидаемой</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g3" id="g3c" value="0">
-                        <label for="g3c"><span class="radio-circle"></span>Проценты распределены равномерно — экономия составит точно 2/5</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g3" id="g3d" value="0">
-                        <label for="g3d"><span class="radio-circle"></span>При досрочном погашении проценты не пересчитываются</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="g3" id="g3a" value="0"><label for="g3a"><span class="radio-circle"></span>Вы сэкономите ровно 40% от общей суммы процентов</label></div>
+                    <div class="option-item"><input type="radio" name="g3" id="g3b" value="5"><label for="g3b"><span class="radio-circle"></span>Большая часть процентов уже выплачена в первые годы — экономия будет меньше ожидаемой</label></div>
+                    <div class="option-item"><input type="radio" name="g3" id="g3c" value="0"><label for="g3c"><span class="radio-circle"></span>Проценты распределены равномерно — экономия составит точно 2/5</label></div>
+                    <div class="option-item"><input type="radio" name="g3" id="g3d" value="0"><label for="g3d"><span class="radio-circle"></span>При досрочном погашении проценты не пересчитываются</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Schedule Q4 -->
             <div class="question-block" data-question="g4" data-section="schedule">
                 <div class="question-label">4. Практическая ситуация:</div>
-                <div class="question-scenario">
-                    Вас направляют на <strong>3 месяца</strong> в зону без стабильной мобильной связи и доступа к интернет-банкингу. У вас есть активный кредит с ежемесячными платежами.
-                </div>
+                <div class="question-scenario">Вас направляют на <strong>3 месяца</strong> в зону без стабильной мобильной связи и доступа к интернет-банкингу. У вас есть активный кредит с ежемесячными платежами.</div>
                 <div class="question-label" style="font-size:14px;">Какой подход к обеспечению платежей наиболее надёжный?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="g4" id="g4a" value="0">
-                        <label for="g4a"><span class="radio-circle"></span>Настроить автоплатёж — этого достаточно</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g4" id="g4b" value="5">
-                        <label for="g4b"><span class="radio-circle"></span>Внести платежи за несколько месяцев вперёд и оформить доверенность на близкого человека</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g4" id="g4c" value="0">
-                        <label for="g4c"><span class="radio-circle"></span>Позвонить в банк и попросить устную отсрочку</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="g4" id="g4d" value="0">
-                        <label for="g4d"><span class="radio-circle"></span>Ничего не предпринимать — банк обязан учитывать условия военной службы</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="g4" id="g4a" value="0"><label for="g4a"><span class="radio-circle"></span>Настроить автоплатёж — этого достаточно</label></div>
+                    <div class="option-item"><input type="radio" name="g4" id="g4b" value="5"><label for="g4b"><span class="radio-circle"></span>Внести платежи за несколько месяцев вперёд и оформить доверенность на близкого человека</label></div>
+                    <div class="option-item"><input type="radio" name="g4" id="g4c" value="0"><label for="g4c"><span class="radio-circle"></span>Позвонить в банк и попросить устную отсрочку</label></div>
+                    <div class="option-item"><input type="radio" name="g4" id="g4d" value="0"><label for="g4d"><span class="radio-circle"></span>Ничего не предпринимать — банк обязан учитывать условия военной службы</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="goBack()">Назад</button>
                 <button class="btn btn-primary" onclick="goNext()">Далее</button>
@@ -1012,125 +513,59 @@
         </div>
     </div>
 
-    <!-- ========== ЭКРАН 4: ТЕСТ — МОШЕННИЧЕСТВО ========== -->
+    <!-- ЭКРАН 4: МОШЕННИЧЕСТВО -->
     <div class="screen" id="screen-fraud">
         <div class="card">
             <div class="section-header">
                 <div class="section-number">4</div>
-                <div class="section-info">
-                    <h2>Тест: Распознавание мошенничества</h2>
-                    <p>Способность выявлять мошеннические схемы — 4 вопроса</p>
-                </div>
+                <div class="section-info"><h2>Тест: Распознавание мошенничества</h2><p>Способность выявлять мошеннические схемы — 4 вопроса</p></div>
             </div>
-
-            <!-- Fraud Q1 -->
             <div class="question-block" data-question="f1" data-section="fraud">
                 <div class="question-label">1. Ситуация:</div>
-                <div class="question-scenario">
-                    Вам поступает звонок с номера, похожего на официальный номер вашего банка. Звонящий представляется сотрудником службы безопасности и сообщает о «подозрительной операции» по вашей карте. Он просит <strong>назвать код из СМС</strong> для «отмены операции».
-                </div>
+                <div class="question-scenario">Вам поступает звонок с номера, похожего на официальный номер вашего банка. Звонящий представляется сотрудником службы безопасности и сообщает о «подозрительной операции» по вашей карте. Он просит <strong>назвать код из СМС</strong> для «отмены операции».</div>
                 <div class="question-label" style="font-size:14px;">Ваши действия?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="f1" id="f1a" value="0">
-                        <label for="f1a"><span class="radio-circle"></span>Назвать код — ситуация срочная, нужно защитить средства</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f1" id="f1b" value="5">
-                        <label for="f1b"><span class="radio-circle"></span>Положить трубку и самостоятельно перезвонить в банк по номеру с карты или официального сайта</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f1" id="f1c" value="0">
-                        <label for="f1c"><span class="radio-circle"></span>Попросить звонящего подтвердить свою личность, назвав ваши паспортные данные</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f1" id="f1d" value="0">
-                        <label for="f1d"><span class="radio-circle"></span>Продиктовать код, но попросить не совершать никаких операций</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="f1" id="f1a" value="0"><label for="f1a"><span class="radio-circle"></span>Назвать код — ситуация срочная, нужно защитить средства</label></div>
+                    <div class="option-item"><input type="radio" name="f1" id="f1b" value="5"><label for="f1b"><span class="radio-circle"></span>Положить трубку и самостоятельно перезвонить в банк по номеру с карты или официального сайта</label></div>
+                    <div class="option-item"><input type="radio" name="f1" id="f1c" value="0"><label for="f1c"><span class="radio-circle"></span>Попросить звонящего подтвердить свою личность, назвав ваши паспортные данные</label></div>
+                    <div class="option-item"><input type="radio" name="f1" id="f1d" value="0"><label for="f1d"><span class="radio-circle"></span>Продиктовать код, но попросить не совершать никаких операций</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Fraud Q2 -->
             <div class="question-block" data-question="f2" data-section="fraud">
                 <div class="question-label">2. Какой из перечисленных признаков с наибольшей вероятностью указывает на мошенничество?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="f2" id="f2a" value="0">
-                        <label for="f2a"><span class="radio-circle"></span>Банк предлагает прийти в отделение лично для решения проблемы</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f2" id="f2b" value="5">
-                        <label for="f2b"><span class="radio-circle"></span>Звонящий создаёт чувство срочности и давит на немедленные действия</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f2" id="f2c" value="0">
-                        <label for="f2c"><span class="radio-circle"></span>Банк отправляет push-уведомление через официальное мобильное приложение</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f2" id="f2d" value="0">
-                        <label for="f2d"><span class="radio-circle"></span>Банк просит подтвердить операцию через контактный центр по официальному номеру</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="f2" id="f2a" value="0"><label for="f2a"><span class="radio-circle"></span>Банк предлагает прийти в отделение лично для решения проблемы</label></div>
+                    <div class="option-item"><input type="radio" name="f2" id="f2b" value="5"><label for="f2b"><span class="radio-circle"></span>Звонящий создаёт чувство срочности и давит на немедленные действия</label></div>
+                    <div class="option-item"><input type="radio" name="f2" id="f2c" value="0"><label for="f2c"><span class="radio-circle"></span>Банк отправляет push-уведомление через официальное мобильное приложение</label></div>
+                    <div class="option-item"><input type="radio" name="f2" id="f2d" value="0"><label for="f2d"><span class="radio-circle"></span>Банк просит подтвердить операцию через контактный центр по официальному номеру</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Fraud Q3 -->
             <div class="question-block" data-question="f3" data-section="fraud">
                 <div class="question-label">3. Ситуация с использованием законодательства:</div>
-                <div class="question-scenario">
-                    Вам звонят и сообщают: <em>«В соответствии с ч. 5.1 ст. 7 Федерального закона 353-ФЗ ваш кредит заблокирован из-за нарушения обязанностей воинского учёта. Для разблокировки срочно подтвердите личность — назовите данные паспорта и код из СМС. В противном случае будет начислен штраф»</em>.
-                </div>
+                <div class="question-scenario">Вам звонят и сообщают: <em>«В соответствии с ч. 5.1 ст. 7 Федерального закона 353-ФЗ ваш кредит заблокирован из-за нарушения обязанностей воинского учёта. Для разблокировки срочно подтвердите личность — назовите данные паспорта и код из СМС. В противном случае будет начислен штраф»</em>.</div>
                 <div class="question-label" style="font-size:14px;">Что это за ситуация?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="f3" id="f3a" value="0">
-                        <label for="f3a"><span class="radio-circle"></span>Стандартная процедура банка по новому закону</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f3" id="f3b" value="5">
-                        <label for="f3b"><span class="radio-circle"></span>Мошенническая схема — банки не звонят с такими требованиями</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f3" id="f3c" value="0">
-                        <label for="f3c"><span class="radio-circle"></span>Требование военного комиссариата, переданное через банк</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f3" id="f3d" value="0">
-                        <label for="f3d"><span class="radio-circle"></span>Автоматическое уведомление банковской системы</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="f3" id="f3a" value="0"><label for="f3a"><span class="radio-circle"></span>Стандартная процедура банка по новому закону</label></div>
+                    <div class="option-item"><input type="radio" name="f3" id="f3b" value="5"><label for="f3b"><span class="radio-circle"></span>Мошенническая схема — банки не звонят с такими требованиями</label></div>
+                    <div class="option-item"><input type="radio" name="f3" id="f3c" value="0"><label for="f3c"><span class="radio-circle"></span>Требование военного комиссариата, переданное через банк</label></div>
+                    <div class="option-item"><input type="radio" name="f3" id="f3d" value="0"><label for="f3d"><span class="radio-circle"></span>Автоматическое уведомление банковской системы</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Fraud Q4 -->
             <div class="question-block" data-question="f4" data-section="fraud">
                 <div class="question-label">4. Ситуация:</div>
-                <div class="question-scenario">
-                    Вы получили СМС: <em>«Ваша версия банковского приложения устарела и будет заблокирована через 24 часа. Обновите приложение по ссылке: bank-update-secure.ru/app»</em>.
-                </div>
+                <div class="question-scenario">Вы получили СМС: <em>«Ваша версия банковского приложения устарела и будет заблокирована через 24 часа. Обновите приложение по ссылке: bank-update-secure.ru/app»</em>.</div>
                 <div class="question-label" style="font-size:14px;">Что следует сделать?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="f4" id="f4a" value="0">
-                        <label for="f4a"><span class="radio-circle"></span>Перейти по ссылке и обновить приложение, чтобы избежать блокировки</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f4" id="f4b" value="5">
-                        <label for="f4b"><span class="radio-circle"></span>Не переходить по ссылке — обновлять приложение только через App Store или Google Play</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f4" id="f4c" value="0">
-                        <label for="f4c"><span class="radio-circle"></span>Переслать ссылку коллегам для совместной проверки</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="f4" id="f4d" value="0">
-                        <label for="f4d"><span class="radio-circle"></span>Написать ответное СМС с запросом подтверждения</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="f4" id="f4a" value="0"><label for="f4a"><span class="radio-circle"></span>Перейти по ссылке и обновить приложение, чтобы избежать блокировки</label></div>
+                    <div class="option-item"><input type="radio" name="f4" id="f4b" value="5"><label for="f4b"><span class="radio-circle"></span>Не переходить по ссылке — обновлять приложение только через App Store или Google Play</label></div>
+                    <div class="option-item"><input type="radio" name="f4" id="f4c" value="0"><label for="f4c"><span class="radio-circle"></span>Переслать ссылку коллегам для совместной проверки</label></div>
+                    <div class="option-item"><input type="radio" name="f4" id="f4d" value="0"><label for="f4d"><span class="radio-circle"></span>Написать ответное СМС с запросом подтверждения</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="goBack()">Назад</button>
                 <button class="btn btn-primary" onclick="goNext()">Далее</button>
@@ -1138,104 +573,49 @@
         </div>
     </div>
 
-    <!-- ========== ЭКРАН 5: КЕЙС-ЗАДАЧИ ========== -->
+    <!-- ЭКРАН 5: КЕЙС-ЗАДАЧИ -->
     <div class="screen" id="screen-cases">
         <div class="card">
             <div class="section-header">
                 <div class="section-number">5</div>
-                <div class="section-info">
-                    <h2>Кейс-задачи</h2>
-                    <p>Принятие решений в условиях, приближённых к реальной службе — 3 кейса</p>
-                </div>
+                <div class="section-info"><h2>Кейс-задачи</h2><p>Принятие решений в условиях, приближённых к реальной службе — 3 кейса</p></div>
             </div>
-
-            <!-- Case 1 -->
             <div class="question-block" data-question="c1" data-section="cases">
                 <div class="question-label">Кейс 1. Оформление кредита перед ротацией</div>
-                <div class="question-scenario">
-                    Военнослужащий <strong>Иванов</strong> готовится к ротации через 3 дня. Ему срочно нужны <strong>400 000 ₽</strong> для решения семейных вопросов. Банк предлагает кредит под <strong>11% годовых</strong> на 3 года. Условия договора включают:<br><br>
-                    • Обязательная страховка жизни — <strong>42 000 ₽</strong><br>
-                    • Комиссия за «ускоренное рассмотрение» — <strong>15 000 ₽</strong><br><br>
-                    Сотрудник банка торопит: <em>«Подпишите сейчас, завтра ставка может вырасти»</em>.
-                </div>
+                <div class="question-scenario">Военнослужащий <strong>Иванов</strong> готовится к ротации через 3 дня. Ему срочно нужны <strong>400 000 ₽</strong> для решения семейных вопросов. Банк предлагает кредит под <strong>11% годовых</strong> на 3 года. Условия договора включают:<br><br>• Обязательная страховка жизни — <strong>42 000 ₽</strong><br>• Комиссия за «ускоренное рассмотрение» — <strong>15 000 ₽</strong><br><br>Сотрудник банка торопит: <em>«Подпишите сейчас, завтра ставка может вырасти»</em>.</div>
                 <div class="question-label" style="font-size:14px;">Какое решение наиболее разумно?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="c1" id="c1a" value="0">
-                        <label for="c1a"><span class="radio-circle"></span>Подписать договор — времени мало, условия приемлемые</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c1" id="c1b" value="7">
-                        <label for="c1b"><span class="radio-circle"></span>Потребовать исключить навязанную страховку и комиссию за «ускоренное рассмотрение» — они не являются обязательными по закону</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c1" id="c1c" value="2">
-                        <label for="c1c"><span class="radio-circle"></span>Полностью отказаться от кредита</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c1" id="c1d" value="0">
-                        <label for="c1d"><span class="radio-circle"></span>Подписать договор и потом оспорить условия через суд</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="c1" id="c1a" value="0"><label for="c1a"><span class="radio-circle"></span>Подписать договор — времени мало, условия приемлемые</label></div>
+                    <div class="option-item"><input type="radio" name="c1" id="c1b" value="7"><label for="c1b"><span class="radio-circle"></span>Потребовать исключить навязанную страховку и комиссию за «ускоренное рассмотрение» — они не являются обязательными по закону</label></div>
+                    <div class="option-item"><input type="radio" name="c1" id="c1c" value="2"><label for="c1c"><span class="radio-circle"></span>Полностью отказаться от кредита</label></div>
+                    <div class="option-item"><input type="radio" name="c1" id="c1d" value="0"><label for="c1d"><span class="radio-circle"></span>Подписать договор и потом оспорить условия через суд</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Case 2 -->
             <div class="question-block" data-question="c2" data-section="cases">
                 <div class="question-label">Кейс 2. Просрочка при отсутствии связи</div>
-                <div class="question-scenario">
-                    Военнослужащий <strong>Петров</strong> находился на полигоне <strong>14 дней</strong> без доступа к мобильному банку. Автоплатёж не прошёл — на счёте не хватило <strong>3 000 ₽</strong>. Банк начислил неустойку и передал информацию в бюро кредитных историй (БКИ). При попытке рефинансирования другой банк отказал из-за ухудшившегося кредитного рейтинга.
-                </div>
+                <div class="question-scenario">Военнослужащий <strong>Петров</strong> находился на полигоне <strong>14 дней</strong> без доступа к мобильному банку. Автоплатёж не прошёл — на счёте не хватило <strong>3 000 ₽</strong>. Банк начислил неустойку и передал информацию в бюро кредитных историй (БКИ). При попытке рефинансирования другой банк отказал из-за ухудшившегося кредитного рейтинга.</div>
                 <div class="question-label" style="font-size:14px;">Какой порядок действий наиболее правильный?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="c2" id="c2a" value="0">
-                        <label for="c2a"><span class="radio-circle"></span>Погасить задолженность и больше ничего не предпринимать</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c2" id="c2b" value="7">
-                        <label for="c2b"><span class="radio-circle"></span>Погасить задолженность, написать заявление в банк с приложением справки о нахождении на полигоне, подать запрос на корректировку записи в БКИ</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c2" id="c2c" value="1">
-                        <label for="c2c"><span class="radio-circle"></span>Сразу обратиться в суд с иском к банку</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c2" id="c2d" value="2">
-                        <label for="c2d"><span class="radio-circle"></span>Подать жалобу в Центральный банк РФ</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="c2" id="c2a" value="0"><label for="c2a"><span class="radio-circle"></span>Погасить задолженность и больше ничего не предпринимать</label></div>
+                    <div class="option-item"><input type="radio" name="c2" id="c2b" value="7"><label for="c2b"><span class="radio-circle"></span>Погасить задолженность, написать заявление в банк с приложением справки о нахождении на полигоне, подать запрос на корректировку записи в БКИ</label></div>
+                    <div class="option-item"><input type="radio" name="c2" id="c2c" value="1"><label for="c2c"><span class="radio-circle"></span>Сразу обратиться в суд с иском к банку</label></div>
+                    <div class="option-item"><input type="radio" name="c2" id="c2d" value="2"><label for="c2d"><span class="radio-circle"></span>Подать жалобу в Центральный банк РФ</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
-            <!-- Case 3 -->
             <div class="question-block" data-question="c3" data-section="cases">
                 <div class="question-label">Кейс 3. Социальная инженерия</div>
-                <div class="question-scenario">
-                    Военнослужащему <strong>Сидорову</strong> в мессенджере пишет аккаунт с фотографией и данными его <strong>командира подразделения</strong>. Сообщение: <em>«Срочно переведи 50 000 ₽ на эту карту для нужд подразделения. Деньги верну через 2 дня. Дело срочное и конфиденциальное — никому не говори»</em>.
-                </div>
+                <div class="question-scenario">Военнослужащему <strong>Сидорову</strong> в мессенджере пишет аккаунт с фотографией и данными его <strong>командира подразделения</strong>. Сообщение: <em>«Срочно переведи 50 000 ₽ на эту карту для нужд подразделения. Деньги верну через 2 дня. Дело срочное и конфиденциальное — никому не говори»</em>.</div>
                 <div class="question-label" style="font-size:14px;">Как следует поступить?</div>
                 <div class="options-list">
-                    <div class="option-item">
-                        <input type="radio" name="c3" id="c3a" value="0">
-                        <label for="c3a"><span class="radio-circle"></span>Перевести деньги — это просьба командира</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c3" id="c3b" value="6">
-                        <label for="c3b"><span class="radio-circle"></span>Связаться с командиром лично или по служебному телефону для подтверждения</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c3" id="c3c" value="2">
-                        <label for="c3c"><span class="radio-circle"></span>Отказать и заблокировать аккаунт</label>
-                    </div>
-                    <div class="option-item">
-                        <input type="radio" name="c3" id="c3d" value="0">
-                        <label for="c3d"><span class="radio-circle"></span>Перевести половину суммы для подстраховки</label>
-                    </div>
+                    <div class="option-item"><input type="radio" name="c3" id="c3a" value="0"><label for="c3a"><span class="radio-circle"></span>Перевести деньги — это просьба командира</label></div>
+                    <div class="option-item"><input type="radio" name="c3" id="c3b" value="6"><label for="c3b"><span class="radio-circle"></span>Связаться с командиром лично или по служебному телефону для подтверждения</label></div>
+                    <div class="option-item"><input type="radio" name="c3" id="c3c" value="2"><label for="c3c"><span class="radio-circle"></span>Отказать и заблокировать аккаунт</label></div>
+                    <div class="option-item"><input type="radio" name="c3" id="c3d" value="0"><label for="c3d"><span class="radio-circle"></span>Перевести половину суммы для подстраховки</label></div>
                 </div>
                 <div class="validation-error">Пожалуйста, выберите один из вариантов</div>
             </div>
-
             <div class="btn-group">
                 <button class="btn btn-secondary" onclick="goBack()">Назад</button>
                 <button class="btn btn-primary" onclick="showResults()">Завершить и получить результаты</button>
@@ -1243,42 +623,53 @@
         </div>
     </div>
 
-    <!-- ========== ЭКРАН 6: РЕЗУЛЬТАТЫ ========== -->
+    <!-- ЭКРАН 6: РЕЗУЛЬТАТЫ -->
     <div class="screen" id="screen-results">
         <div class="card">
             <div class="section-header">
-                <div class="section-number" style="background: var(--gold); color: var(--primary);">✓</div>
-                <div class="section-info">
-                    <h2>Результаты диагностики</h2>
-                    <p>Индивидуальная оценка уровня кредитной грамотности</p>
+                <div class="section-number" style="background: var(--gold); color: var(--primary);">&#10003;</div>
+                <div class="section-info"><h2>Результаты диагностики</h2><p>Индивидуальная оценка уровня кредитной грамотности</p></div>
+            </div>
+            <div class="result-hero" id="resultHero"></div>
+            <div class="section-scores" id="sectionScores"></div>
+
+            <div class="feedback-section" id="feedbackSection">
+                <h3>Разбор ответов</h3>
+                <span class="feedback-toggle" id="feedbackToggle" onclick="toggleFeedback()">Показать детальный разбор каждого ответа</span>
+                <div class="feedback-list" id="feedbackList" style="display:none;"></div>
+            </div>
+
+            <div class="recommendations" id="recommendations"></div>
+
+            <div class="report-section">
+                <h3>Отправить результаты ИИ-консультанту</h3>
+                <p style="font-size:13px; color:var(--gray); margin-bottom:16px;">Скопируйте отчёт и отправьте его ИИ-консультанту в Telegram для получения персонализированного плана повышения финансовой грамотности.</p>
+                <div class="report-actions">
+                    <button class="btn btn-primary" onclick="copyReport()">Скопировать отчёт</button>
+                    <button class="btn btn-telegram" id="btnTelegram" onclick="openTelegram()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        Открыть ИИ-консультанта
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.print()">Сохранить PDF</button>
                 </div>
+                <textarea class="report-textarea" id="reportText" readonly></textarea>
             </div>
 
-            <div class="result-hero" id="resultHero">
-                <!-- Заполняется динамически -->
-            </div>
-
-            <div class="section-scores" id="sectionScores">
-                <!-- Заполняется динамически -->
-            </div>
-
-            <div class="recommendations" id="recommendations">
-                <!-- Заполняется динамически -->
-            </div>
-
-            <div style="text-align: center; margin-top: 40px; padding-top: 24px; border-top: 2px solid var(--gray-light);">
-                <button class="btn btn-secondary" onclick="restartModule()" style="margin-right: 12px;">Пройти заново</button>
-                <button class="btn btn-primary" onclick="window.print()">Сохранить результат (PDF)</button>
+            <div style="text-align: center; margin-top: 32px; padding-top: 24px; border-top: 2px solid var(--gray-light);">
+                <button class="btn btn-secondary" onclick="restartModule()">Пройти заново</button>
             </div>
         </div>
     </div>
 
 </div>
 
+<div class="copy-notification" id="copyNotification">Отчёт скопирован в буфер обмена</div>
+
 <script>
-    // ==================== КОНФИГУРАЦИЯ ====================
-    const screens = ['screen-welcome', 'screen-survey', 'screen-psk', 'screen-schedule', 'screen-fraud', 'screen-cases', 'screen-results'];
+    const screens = ['screen-welcome','screen-survey','screen-psk','screen-schedule','screen-fraud','screen-cases','screen-results'];
     let currentScreen = 0;
+
+    const TELEGRAM_BOT = 'creditvn_advisor_bot';
 
     const sectionConfig = {
         survey:   { name: 'Анкетирование', max: 16, questions: ['s2','s3','s4','s5'] },
@@ -1290,6 +681,143 @@
 
     const totalMax = 96;
 
+    // Метаданные вопросов: правильный ответ, текст, объяснение
+    const questionMeta = {
+        s2: {
+            text: 'Знание ПСК',
+            section: 'Анкетирование',
+            bestValue: '4',
+            bestText: 'Да, хорошо понимаю и могу объяснить',
+            explanation: 'ПСК (полная стоимость кредита) включает все затраты заёмщика: проценты, комиссии, обязательные страховки. Это единственный достоверный показатель для сравнения кредитных предложений (ст. 6 353-ФЗ).'
+        },
+        s3: {
+            text: 'Различение графиков платежей',
+            section: 'Анкетирование',
+            bestValue: '4',
+            bestText: 'Да, свободно разбираюсь в обоих типах',
+            explanation: 'Аннуитетный платёж — фиксированная сумма ежемесячно. Дифференцированный — убывающая сумма. Общая переплата при дифференцированном обычно ниже, но первые платежи выше.'
+        },
+        s4: {
+            text: 'Знание 377-ФЗ (кредитные каникулы)',
+            section: 'Анкетирование',
+            bestValue: '4',
+            bestText: 'Да, знаю условия и порядок оформления',
+            explanation: '377-ФЗ даёт военнослужащим, участвующим в СВО, право на кредитные каникулы — приостановку платежей на период мобилизации без штрафных санкций.'
+        },
+        s5: {
+            text: 'Знание 391-ФЗ (прекращение обязательств)',
+            section: 'Анкетирование',
+            bestValue: '4',
+            bestText: 'Да, знаю условия применения',
+            explanation: '391-ФЗ предусматривает возможность прекращения кредитных обязательств для определённых категорий военнослужащих — это уникальная мера защиты.'
+        },
+        p1: {
+            text: 'Сравнение кредитов по ПСК',
+            section: 'Расчёт ПСК',
+            bestValue: '5',
+            bestText: 'Кредит А выгоднее (без скрытых платежей)',
+            explanation: 'Кредит Б: 2% комиссия = 10 000 ₽ + ежегодная страховка 1,5% от остатка ≈ 15 000-20 000 ₽ за 3 года. ПСК кредита Б значительно превышает 10%, что делает кредит А выгоднее.'
+        },
+        p2: {
+            text: 'Что не входит в ПСК',
+            section: 'Расчёт ПСК',
+            bestValue: '5',
+            bestText: 'Штрафы и пени за просрочку',
+            explanation: 'Штрафы не включаются в ПСК, так как заранее неизвестно, будут ли нарушены условия договора. ПСК включает только плановые расходы: проценты, комиссии, обязательные страховки (ст. 6 353-ФЗ).'
+        },
+        p3: {
+            text: 'Влияние страховки на ПСК',
+            section: 'Расчёт ПСК',
+            bestValue: '5',
+            bestText: 'ПСК увеличится',
+            explanation: 'Если страховка — обязательное условие выдачи кредита, она включается в ПСК. 35 000 ₽ при кредите 300 000 ₽ увеличивает эффективную ставку примерно на 5-6 п.п.'
+        },
+        p4: {
+            text: 'Скрытые комиссии в кредите',
+            section: 'Расчёт ПСК',
+            bestValue: '5',
+            bestText: 'ПСК значительно выше 8,5%',
+            explanation: 'Реальная ПСК = 8,5% + 1,2% (обслуживание) + 2,3% (страховка) ≈ 12%+. «Подписывайте быстрее» — тактика давления, чтобы не дать время изучить договор.'
+        },
+        g1: {
+            text: 'Аннуитетный vs дифференцированный',
+            section: 'Графики платежей',
+            bestValue: '5',
+            bestText: 'Аннуитетный — одинаковая сумма; дифференцированный — уменьшается',
+            explanation: 'Аннуитет удобен для планирования бюджета (фикс. сумма). Дифференцированный — меньше итоговая переплата, но первые платежи выше.'
+        },
+        g2: {
+            text: 'Расчёт переплаты по кредиту',
+            section: 'Графики платежей',
+            bestValue: '5',
+            bestText: '~335 000 ₽',
+            explanation: '22 244 ₽ x 60 мес. = 1 334 640 ₽. Переплата = 1 334 640 - 1 000 000 = 334 640 ₽. Это базовый расчёт, который должен уметь делать каждый заёмщик.'
+        },
+        g3: {
+            text: 'Досрочное погашение при аннуитете',
+            section: 'Графики платежей',
+            bestValue: '5',
+            bestText: 'Большая часть процентов уже выплачена в первые годы',
+            explanation: 'При аннуитете к 3-му году из 5 вы уже выплатили 70-75% всех процентов, но погасили лишь ~45% тела долга. Экономия при досрочном погашении будет меньше ожидаемой.'
+        },
+        g4: {
+            text: 'Обеспечение платежей при отсутствии связи',
+            section: 'Графики платежей',
+            bestValue: '5',
+            bestText: 'Внести платежи вперёд + доверенность',
+            explanation: 'Автоплатёж может не сработать при нехватке средств. Надёжнее: (1) внести 2-3 платежа авансом, (2) оставить запас на счёте, (3) оформить доверенность, (4) уведомить банк.'
+        },
+        f1: {
+            text: 'Звонок от «службы безопасности»',
+            section: 'Мошенничество',
+            bestValue: '5',
+            bestText: 'Положить трубку и перезвонить самостоятельно',
+            explanation: 'Банк НИКОГДА не запрашивает код из СМС по телефону. Код — ключ подтверждения операции. Единственное правильное действие — положить трубку и перезвонить по номеру с карты.'
+        },
+        f2: {
+            text: 'Признаки мошенничества',
+            section: 'Мошенничество',
+            bestValue: '5',
+            bestText: 'Создание чувства срочности и давление',
+            explanation: 'Искусственная срочность — главный инструмент мошенников. Давление лишает жертву возможности обдумать ситуацию. Настоящий банк не торопит и предлагает прийти в отделение.'
+        },
+        f3: {
+            text: 'Мошенничество с использованием 353-ФЗ',
+            section: 'Мошенничество',
+            bestValue: '5',
+            bestText: 'Мошенническая схема',
+            explanation: 'Банки не звонят с требованиями «разблокировки». Ч. 5.1 ст. 7 353-ФЗ применяется автоматически — банк не просит коды или данные паспорта по телефону.'
+        },
+        f4: {
+            text: 'Фишинговая СМС-ссылка',
+            section: 'Мошенничество',
+            bestValue: '5',
+            bestText: 'Обновлять только через App Store / Google Play',
+            explanation: 'Банки рассылают обновления только через официальные магазины. СМС со ссылками на скачивание — классическая фишинговая схема для кражи данных.'
+        },
+        c1: {
+            text: 'Кейс: кредит перед ротацией',
+            section: 'Кейс-задачи',
+            bestValue: '7',
+            bestText: 'Потребовать исключить навязанные услуги',
+            explanation: 'Навязывание страховки запрещено по закону. «Ускоренное рассмотрение» — навязанная услуга. Заёмщик имеет право потребовать исключить эти платежи. Также можно отказаться от страховки в течение 14 дней.'
+        },
+        c2: {
+            text: 'Кейс: просрочка на полигоне',
+            section: 'Кейс-задачи',
+            bestValue: '7',
+            bestText: 'Погасить + справка + заявление в БКИ',
+            explanation: 'Правильная последовательность: (1) погасить долг, (2) получить справку о полигоне, (3) заявление в банк об отмене неустойки, (4) заявление в БКИ о корректировке. Документальное подтверждение — ключевой фактор.'
+        },
+        c3: {
+            text: 'Кейс: социальная инженерия',
+            section: 'Кейс-задачи',
+            bestValue: '6',
+            bestText: 'Проверить через другой канал связи',
+            explanation: 'Мошенники создают фейковые аккаунты командиров. Признаки: просьба о деньгах через мессенджер, требование конфиденциальности, срочность. Всегда проверяйте лично или по служебному телефону.'
+        }
+    };
+
     // ==================== НАВИГАЦИЯ ====================
     function showScreen(index) {
         document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -1300,56 +828,38 @@
     }
 
     function updateProgress() {
-        const total = screens.length - 1; // без экрана результатов
+        const total = screens.length - 1;
         const pct = currentScreen === 0 ? 0 : (currentScreen / total) * 100;
         document.getElementById('progressBar').style.width = pct + '%';
     }
 
-    function startModule() {
-        showScreen(1);
-    }
+    function startModule() { showScreen(1); }
 
     function goNext() {
         if (!validateCurrentScreen()) return;
-        if (currentScreen < screens.length - 2) {
-            showScreen(currentScreen + 1);
-        }
+        if (currentScreen < screens.length - 2) showScreen(currentScreen + 1);
     }
 
-    function goBack() {
-        if (currentScreen > 0) {
-            showScreen(currentScreen - 1);
-        }
-    }
+    function goBack() { if (currentScreen > 0) showScreen(currentScreen - 1); }
 
     // ==================== ВАЛИДАЦИЯ ====================
     function validateCurrentScreen() {
         const screenEl = document.getElementById(screens[currentScreen]);
         const questions = screenEl.querySelectorAll('.question-block[data-question]');
         let valid = true;
-
         questions.forEach(q => {
             const name = q.dataset.question;
             const selected = document.querySelector(`input[name="${name}"]:checked`);
-            if (!selected) {
-                q.classList.add('has-error');
-                valid = false;
-            } else {
-                q.classList.remove('has-error');
-            }
+            if (!selected) { q.classList.add('has-error'); valid = false; }
+            else { q.classList.remove('has-error'); }
         });
-
         if (!valid) {
             const firstError = screenEl.querySelector('.has-error');
-            if (firstError) {
-                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-
         return valid;
     }
 
-    // Снимаем ошибку при выборе варианта
     document.addEventListener('change', function(e) {
         if (e.target.type === 'radio') {
             const block = e.target.closest('.question-block');
@@ -1360,36 +870,159 @@
     // ==================== ПОДСЧЁТ РЕЗУЛЬТАТОВ ====================
     function calculateScores() {
         const scores = {};
+        const answers = {};
 
         for (const [section, config] of Object.entries(sectionConfig)) {
             let sectionScore = 0;
             config.questions.forEach(qName => {
                 const selected = document.querySelector(`input[name="${qName}"]:checked`);
                 if (selected) {
-                    sectionScore += parseInt(selected.value) || 0;
+                    const val = parseInt(selected.value) || 0;
+                    sectionScore += val;
+                    const labelEl = selected.nextElementSibling;
+                    const labelText = labelEl ? labelEl.textContent.trim() : '';
+                    answers[qName] = { value: selected.value, label: labelText, score: val };
                 }
             });
-            scores[section] = {
-                score: sectionScore,
-                max: config.max,
-                pct: Math.round((sectionScore / config.max) * 100),
-                name: config.name
-            };
+            scores[section] = { score: sectionScore, max: config.max, pct: Math.round((sectionScore / config.max) * 100), name: config.name };
+        }
+
+        // Также сохраняем s1 (информационный)
+        const s1sel = document.querySelector('input[name="s1"]:checked');
+        if (s1sel) {
+            const lbl = s1sel.nextElementSibling;
+            answers['s1'] = { value: s1sel.value, label: lbl ? lbl.textContent.trim() : '', score: 0 };
         }
 
         const totalScore = Object.values(scores).reduce((sum, s) => sum + s.score, 0);
         const totalPct = Math.round((totalScore / totalMax) * 100);
-
         let level, levelClass, levelLabel;
-        if (totalPct >= 70) {
-            level = 'high'; levelClass = 'level-high'; levelLabel = 'Высокий уровень';
-        } else if (totalPct >= 40) {
-            level = 'medium'; levelClass = 'level-medium'; levelLabel = 'Средний уровень';
+        if (totalPct >= 70) { level = 'high'; levelClass = 'level-high'; levelLabel = 'Высокий уровень'; }
+        else if (totalPct >= 40) { level = 'medium'; levelClass = 'level-medium'; levelLabel = 'Средний уровень'; }
+        else { level = 'low'; levelClass = 'level-low'; levelLabel = 'Низкий уровень'; }
+
+        return { scores, answers, totalScore, totalMax, totalPct, level, levelClass, levelLabel };
+    }
+
+    // ==================== ОБРАТНАЯ СВЯЗЬ ПО ВОПРОСАМ ====================
+    function generateFeedback(results) {
+        const { answers } = results;
+        let html = '';
+        const allQuestions = ['s2','s3','s4','s5','p1','p2','p3','p4','g1','g2','g3','g4','f1','f2','f3','f4','c1','c2','c3'];
+
+        allQuestions.forEach(qName => {
+            const meta = questionMeta[qName];
+            const answer = answers[qName];
+            if (!meta || !answer) return;
+
+            const isCorrect = answer.value === meta.bestValue;
+            const cssClass = isCorrect ? 'correct' : 'wrong';
+            const icon = isCorrect ? '&#9989;' : '&#10060;';
+
+            html += `<div class="feedback-item ${cssClass}">
+                <div class="fb-header">
+                    <span class="fb-icon">${icon}</span>
+                    <span class="fb-question">${meta.section}: ${meta.text}</span>
+                </div>
+                <div class="fb-answer">
+                    <span class="label">Ваш ответ:</span> <span class="${isCorrect ? 'fb-correct' : 'fb-user-wrong'}">${answer.label}</span>
+                </div>
+                ${!isCorrect ? `<div class="fb-answer"><span class="label">Правильный ответ:</span> <span class="fb-correct">${meta.bestText}</span></div>` : ''}
+                <div class="fb-explanation">${meta.explanation}</div>
+            </div>`;
+        });
+
+        return html;
+    }
+
+    function toggleFeedback() {
+        const list = document.getElementById('feedbackList');
+        const toggle = document.getElementById('feedbackToggle');
+        if (list.style.display === 'none') {
+            list.style.display = 'flex';
+            toggle.textContent = 'Скрыть детальный разбор';
         } else {
-            level = 'low'; levelClass = 'level-low'; levelLabel = 'Низкий уровень';
+            list.style.display = 'none';
+            toggle.textContent = 'Показать детальный разбор каждого ответа';
+        }
+    }
+
+    // ==================== ГЕНЕРАЦИЯ ТЕКСТОВОГО ОТЧЁТА ====================
+    function generateTextReport(results) {
+        const { scores, answers, totalPct, levelLabel } = results;
+        const allQuestions = ['s2','s3','s4','s5','p1','p2','p3','p4','g1','g2','g3','g4','f1','f2','f3','f4','c1','c2','c3'];
+
+        let report = `ОТЧЁТ О ДИАГНОСТИКЕ КРЕДИТНОЙ ГРАМОТНОСТИ\n`;
+        report += `==========================================\n\n`;
+        report += `Общий результат: ${totalPct} из 100 (${levelLabel})\n\n`;
+
+        report += `БАЛЛЫ ПО РАЗДЕЛАМ:\n`;
+        for (const [key, data] of Object.entries(scores)) {
+            report += `  ${data.name}: ${data.score}/${data.max} (${data.pct}%)\n`;
         }
 
-        return { scores, totalScore, totalMax, totalPct, level, levelClass, levelLabel };
+        // Кредитный опыт
+        if (answers['s1']) {
+            report += `\nКРЕДИТНЫЙ ОПЫТ: ${answers['s1'].label}\n`;
+        }
+
+        report += `\nДЕТАЛЬНЫЙ ПРОФИЛЬ ОТВЕТОВ:\n`;
+        report += `----------------------------\n`;
+
+        allQuestions.forEach(qName => {
+            const meta = questionMeta[qName];
+            const answer = answers[qName];
+            if (!meta || !answer) return;
+
+            const isCorrect = answer.value === meta.bestValue;
+            const mark = isCorrect ? '[OK]' : '[!!]';
+
+            report += `\n${mark} ${meta.section} > ${meta.text}\n`;
+            report += `    Ответ: ${answer.label}\n`;
+            if (!isCorrect) {
+                report += `    Правильно: ${meta.bestText}\n`;
+            }
+            report += `    Пояснение: ${meta.explanation}\n`;
+        });
+
+        report += `\nСЛАБЫЕ ЗОНЫ (требуют внимания):\n`;
+        for (const [key, data] of Object.entries(scores)) {
+            if (data.pct < 50) report += `  [КРИТИЧНО] ${data.name}: ${data.pct}%\n`;
+            else if (data.pct < 70) report += `  [ВНИМАНИЕ] ${data.name}: ${data.pct}%\n`;
+        }
+
+        report += `\n---\n`;
+        report += `Данный отчёт сгенерирован модулем оценки кредитной грамотности военнослужащих.\n`;
+        report += `Передайте этот отчёт ИИ-консультанту для получения персонализированного плана развития финансовых навыков.\n`;
+
+        return report;
+    }
+
+    // ==================== КОПИРОВАНИЕ И TELEGRAM ====================
+    function copyReport() {
+        const textarea = document.getElementById('reportText');
+        textarea.select();
+        navigator.clipboard.writeText(textarea.value).then(() => {
+            const notif = document.getElementById('copyNotification');
+            notif.classList.add('show');
+            setTimeout(() => notif.classList.remove('show'), 2500);
+        }).catch(() => {
+            textarea.select();
+            document.execCommand('copy');
+            const notif = document.getElementById('copyNotification');
+            notif.classList.add('show');
+            setTimeout(() => notif.classList.remove('show'), 2500);
+        });
+    }
+
+    function openTelegram() {
+        const report = document.getElementById('reportText').value;
+        const encoded = encodeURIComponent(report.substring(0, 4000));
+        if (TELEGRAM_BOT !== 'PLACEHOLDER_BOT') {
+            window.open(`https://t.me/${TELEGRAM_BOT}?start=report`, '_blank');
+        } else {
+            alert('Telegram-бот пока не подключён. Скопируйте отчёт и отправьте его консультанту вручную.');
+        }
     }
 
     // ==================== РЕКОМЕНДАЦИИ ====================
@@ -1397,153 +1030,91 @@
         const recs = [];
         const { scores } = results;
 
-        // Анкетирование
         if (scores.survey.pct < 50) {
-            recs.push({
-                title: 'Повышение финансовой осведомлённости',
-                type: 'rec-critical',
-                items: [
-                    'Изучите понятие полной стоимости кредита (ПСК) — это ключевой показатель для сравнения кредитных предложений',
-                    'Ознакомьтесь с 377-ФЗ о кредитных каникулах для военнослужащих — это ваше законное право',
-                    'Изучите 391-ФЗ о прекращении кредитных обязательств — важная защита для участников СВО',
-                    'Начните использовать калькулятор ПСК на сайте Банка России (cbr.ru)'
-                ]
-            });
+            recs.push({ title: 'Повышение финансовой осведомлённости', type: 'rec-critical', items: [
+                'Изучите понятие полной стоимости кредита (ПСК) — это ключевой показатель для сравнения кредитных предложений',
+                'Ознакомьтесь с 377-ФЗ о кредитных каникулах для военнослужащих — это ваше законное право',
+                'Изучите 391-ФЗ о прекращении кредитных обязательств — важная защита для участников СВО',
+                'Начните использовать калькулятор ПСК на сайте Банка России (cbr.ru)'
+            ]});
         } else if (scores.survey.pct < 75) {
-            recs.push({
-                title: 'Углубление финансовых знаний',
-                type: 'rec-warning',
-                items: [
-                    'Детально изучите порядок применения 377-ФЗ и 391-ФЗ — знание процедуры не менее важно, чем знание о существовании закона',
-                    'Освойте онлайн-калькуляторы для сравнения кредитных предложений'
-                ]
-            });
+            recs.push({ title: 'Углубление финансовых знаний', type: 'rec-warning', items: [
+                'Детально изучите порядок применения 377-ФЗ и 391-ФЗ — знание процедуры не менее важно, чем знание о существовании закона',
+                'Освойте онлайн-калькуляторы для сравнения кредитных предложений'
+            ]});
         }
 
-        // ПСК
         if (scores.psk.pct < 50) {
-            recs.push({
-                title: 'Навыки анализа полной стоимости кредита',
-                type: 'rec-critical',
-                items: [
-                    'Всегда требуйте расчёт ПСК до подписания договора — банк обязан его предоставить',
-                    'Научитесь выявлять скрытые платежи: комиссии за выдачу, обслуживание счёта, обязательные страховки',
-                    'Помните: низкая процентная ставка не означает низкую ПСК — всегда считайте полную стоимость',
-                    'Перед подписанием любого кредитного договора берите паузу минимум на 1 день для анализа'
-                ]
-            });
+            recs.push({ title: 'Навыки анализа полной стоимости кредита', type: 'rec-critical', items: [
+                'Всегда требуйте расчёт ПСК до подписания договора — банк обязан его предоставить',
+                'Научитесь выявлять скрытые платежи: комиссии за выдачу, обслуживание счёта, обязательные страховки',
+                'Помните: низкая процентная ставка не означает низкую ПСК — всегда считайте полную стоимость',
+                'Перед подписанием любого кредитного договора берите паузу минимум на 1 день для анализа'
+            ]});
         } else if (scores.psk.pct < 75) {
-            recs.push({
-                title: 'Совершенствование навыков оценки ПСК',
-                type: 'rec-warning',
-                items: [
-                    'Практикуйтесь в сравнении кредитных предложений с помощью калькулятора ПСК',
-                    'Обращайте внимание на условия, написанные мелким шрифтом — особенно при дефиците времени перед командировкой'
-                ]
-            });
+            recs.push({ title: 'Совершенствование навыков оценки ПСК', type: 'rec-warning', items: [
+                'Практикуйтесь в сравнении кредитных предложений с помощью калькулятора ПСК',
+                'Обращайте внимание на условия, написанные мелким шрифтом — особенно при дефиците времени перед командировкой'
+            ]});
         } else {
-            recs.push({
-                title: 'Полная стоимость кредита — сильная сторона',
-                type: 'rec-good',
-                items: [
-                    'Вы хорошо разбираетесь в расчёте ПСК. Делитесь знаниями с сослуживцами',
-                    'Рассмотрите возможность стать финансовым наставником в подразделении'
-                ]
-            });
+            recs.push({ title: 'Полная стоимость кредита — сильная сторона', type: 'rec-good', items: [
+                'Вы хорошо разбираетесь в расчёте ПСК. Делитесь знаниями с сослуживцами',
+                'Рассмотрите возможность стать финансовым наставником в подразделении'
+            ]});
         }
 
-        // Графики платежей
         if (scores.schedule.pct < 50) {
-            recs.push({
-                title: 'Анализ графиков платежей',
-                type: 'rec-critical',
-                items: [
-                    'Разберитесь в разнице между аннуитетным и дифференцированным платежом — это влияет на переплату',
-                    'При аннуитетной схеме основная доля процентов выплачивается в первые годы — учитывайте это при досрочном погашении',
-                    'Перед командировкой или ротацией: вносите платежи заранее, настройте резервные каналы оплаты',
-                    'Составьте «финансовый план на случай командировки» — список действий по кредитам при отъезде'
-                ]
-            });
+            recs.push({ title: 'Анализ графиков платежей', type: 'rec-critical', items: [
+                'Разберитесь в разнице между аннуитетным и дифференцированным платежом — это влияет на переплату',
+                'При аннуитетной схеме основная доля процентов выплачивается в первые годы — учитывайте это при досрочном погашении',
+                'Перед командировкой или ротацией: вносите платежи заранее, настройте резервные каналы оплаты',
+                'Составьте «финансовый план на случай командировки» — список действий по кредитам при отъезде'
+            ]});
         } else if (scores.schedule.pct < 75) {
-            recs.push({
-                title: 'Управление графиком платежей',
-                type: 'rec-warning',
-                items: [
-                    'Научитесь рассчитывать переплату самостоятельно — это простое умножение ежемесячного платежа на количество месяцев минус сумма кредита',
-                    'Создайте финансовую «подушку безопасности» на 2–3 платежа вперёд на случай отсутствия связи'
-                ]
-            });
+            recs.push({ title: 'Управление графиком платежей', type: 'rec-warning', items: [
+                'Научитесь рассчитывать переплату самостоятельно — это простое умножение ежемесячного платежа на количество месяцев минус сумма кредита',
+                'Создайте финансовую «подушку безопасности» на 2-3 платежа вперёд на случай отсутствия связи'
+            ]});
         } else {
-            recs.push({
-                title: 'Анализ графиков платежей — сильная сторона',
-                type: 'rec-good',
-                items: [
-                    'Вы уверенно разбираетесь в схемах погашения. Помогайте сослуживцам планировать платежи перед командировками'
-                ]
-            });
+            recs.push({ title: 'Анализ графиков платежей — сильная сторона', type: 'rec-good', items: [
+                'Вы уверенно разбираетесь в схемах погашения. Помогайте сослуживцам планировать платежи перед командировками'
+            ]});
         }
 
-        // Мошенничество
         if (scores.fraud.pct < 50) {
-            recs.push({
-                title: 'Защита от финансового мошенничества',
-                type: 'rec-critical',
-                items: [
-                    'Золотое правило: НИКОГДА не сообщайте коды из СМС, даже если звонящий представляется сотрудником банка',
-                    'При подозрительном звонке — кладите трубку и перезванивайте сами по номеру с карты',
-                    'Обновляйте приложения только через официальные магазины (App Store / Google Play)',
-                    'Будьте особенно бдительны при упоминании законов и «блокировок» — мошенники используют юридическую терминологию для давления',
-                    'Проверяйте любые необычные просьбы о деньгах — даже от знакомых — через другой канал связи'
-                ]
-            });
+            recs.push({ title: 'Защита от финансового мошенничества', type: 'rec-critical', items: [
+                'Золотое правило: НИКОГДА не сообщайте коды из СМС, даже если звонящий представляется сотрудником банка',
+                'При подозрительном звонке — кладите трубку и перезванивайте сами по номеру с карты',
+                'Обновляйте приложения только через официальные магазины (App Store / Google Play)',
+                'Будьте особенно бдительны при упоминании законов и «блокировок» — мошенники используют юридическую терминологию для давления'
+            ]});
         } else if (scores.fraud.pct < 75) {
-            recs.push({
-                title: 'Усиление защиты от мошенничества',
-                type: 'rec-warning',
-                items: [
-                    'Изучите новые схемы мошенничества, связанные с изменениями в законодательстве о воинском учёте (ч. 5.1 ст. 7 353-ФЗ)',
-                    'Установите лимиты на переводы в мобильном банке — это дополнительная защита'
-                ]
-            });
+            recs.push({ title: 'Усиление защиты от мошенничества', type: 'rec-warning', items: [
+                'Изучите новые схемы мошенничества, связанные с изменениями в законодательстве о воинском учёте (ч. 5.1 ст. 7 353-ФЗ)',
+                'Установите лимиты на переводы в мобильном банке — это дополнительная защита'
+            ]});
         } else {
-            recs.push({
-                title: 'Распознавание мошенничества — сильная сторона',
-                type: 'rec-good',
-                items: [
-                    'Отличный уровень осведомлённости. Помогайте сослуживцам и членам семей распознавать мошеннические схемы'
-                ]
-            });
+            recs.push({ title: 'Распознавание мошенничества — сильная сторона', type: 'rec-good', items: [
+                'Отличный уровень осведомлённости. Помогайте сослуживцам и членам семей распознавать мошеннические схемы'
+            ]});
         }
 
-        // Кейсы
         if (scores.cases.pct < 50) {
-            recs.push({
-                title: 'Принятие финансовых решений в условиях службы',
-                type: 'rec-critical',
-                items: [
-                    'Никогда не подписывайте кредитный договор под давлением — закон даёт вам «период охлаждения» для отказа от навязанных услуг',
-                    'Перед ротацией: составьте чек-лист финансовых дел (платежи, доверенности, резервный фонд)',
-                    'При просрочке по объективным причинам: фиксируйте обстоятельства справками и обращайтесь в банк письменно',
-                    'Любые просьбы о переводах — проверяйте через другой канал связи, даже от «командира»'
-                ]
-            });
+            recs.push({ title: 'Принятие финансовых решений в условиях службы', type: 'rec-critical', items: [
+                'Никогда не подписывайте кредитный договор под давлением — закон даёт вам «период охлаждения» для отказа от навязанных услуг',
+                'Перед ротацией: составьте чек-лист финансовых дел (платежи, доверенности, резервный фонд)',
+                'При просрочке по объективным причинам: фиксируйте обстоятельства справками и обращайтесь в банк письменно',
+                'Любые просьбы о переводах — проверяйте через другой канал связи, даже от «командира»'
+            ]});
         } else if (scores.cases.pct < 75) {
-            recs.push({
-                title: 'Практические навыки финансовых решений',
-                type: 'rec-warning',
-                items: [
-                    'Составьте личный алгоритм действий при типичных финансовых ситуациях: кредит перед командировкой, просрочка, подозрительный звонок',
-                    'Изучите, какие документы вам могут понадобиться для защиты своих прав перед банком (справки о командировке, о нахождении в зоне СВО)'
-                ]
-            });
+            recs.push({ title: 'Практические навыки финансовых решений', type: 'rec-warning', items: [
+                'Составьте личный алгоритм действий при типичных финансовых ситуациях: кредит перед командировкой, просрочка, подозрительный звонок',
+                'Изучите, какие документы вам могут понадобиться для защиты своих прав перед банком'
+            ]});
         } else {
-            recs.push({
-                title: 'Практические навыки — сильная сторона',
-                type: 'rec-good',
-                items: [
-                    'Вы демонстрируете грамотный подход к финансовым решениям в условиях службы. Делитесь опытом с подразделением'
-                ]
-            });
+            recs.push({ title: 'Практические навыки — сильная сторона', type: 'rec-good', items: [
+                'Вы демонстрируете грамотный подход к финансовым решениям в условиях службы. Делитесь опытом с подразделением'
+            ]});
         }
 
         return recs;
@@ -1552,57 +1123,46 @@
     // ==================== ОТОБРАЖЕНИЕ РЕЗУЛЬТАТОВ ====================
     function showResults() {
         if (!validateCurrentScreen()) return;
-
         const results = calculateScores();
 
-        // Герой-блок с общим баллом
+        // Герой-блок
         document.getElementById('resultHero').innerHTML = `
             <div class="result-score-circle ${results.levelClass}">
                 <div class="result-score-number">${results.totalPct}</div>
                 <div class="result-score-label">из 100</div>
             </div>
             <div class="result-level-badge">${results.levelLabel}</div>
-            <p style="margin-top:16px; color: var(--gray); font-size: 14px;">
-                Набрано баллов: ${results.totalScore} из ${results.totalMax}
-            </p>
+            <p style="margin-top:16px; color: var(--gray); font-size: 14px;">Набрано баллов: ${results.totalScore} из ${results.totalMax}</p>
         `;
 
-        // Баллы по секциям
+        // Секции
         let scoresHtml = '';
         for (const [key, data] of Object.entries(results.scores)) {
             let fillClass = data.pct >= 70 ? 'fill-high' : (data.pct >= 40 ? 'fill-medium' : 'fill-low');
-            scoresHtml += `
-                <div class="section-score-card">
-                    <h4>${data.name}</h4>
-                    <div class="section-score-bar">
-                        <div class="section-score-fill ${fillClass}" style="width: ${data.pct}%"></div>
-                    </div>
-                    <div class="section-score-value">${data.score} <span>/ ${data.max}</span></div>
-                </div>
-            `;
+            scoresHtml += `<div class="section-score-card"><h4>${data.name}</h4><div class="section-score-bar"><div class="section-score-fill ${fillClass}" style="width: ${data.pct}%"></div></div><div class="section-score-value">${data.score} <span>/ ${data.max}</span></div></div>`;
         }
         document.getElementById('sectionScores').innerHTML = scoresHtml;
+
+        // Детальная обратная связь
+        document.getElementById('feedbackList').innerHTML = generateFeedback(results);
+        document.getElementById('feedbackList').style.display = 'none';
+        document.getElementById('feedbackToggle').textContent = 'Показать детальный разбор каждого ответа';
 
         // Рекомендации
         const recs = getRecommendations(results);
         let recsHtml = '<h3>Индивидуальные рекомендации</h3>';
         recs.forEach(rec => {
-            recsHtml += `
-                <div class="rec-block ${rec.type}">
-                    <h4>${rec.title}</h4>
-                    <ul>
-                        ${rec.items.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-            `;
+            recsHtml += `<div class="rec-block ${rec.type}"><h4>${rec.title}</h4><ul>${rec.items.map(item => `<li>${item}</li>`).join('')}</ul></div>`;
         });
         document.getElementById('recommendations').innerHTML = recsHtml;
+
+        // Текстовый отчёт
+        document.getElementById('reportText').value = generateTextReport(results);
 
         showScreen(screens.length - 1);
     }
 
     function restartModule() {
-        // Сброс всех ответов
         document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
         document.querySelectorAll('.question-block').forEach(q => q.classList.remove('has-error'));
         showScreen(0);
