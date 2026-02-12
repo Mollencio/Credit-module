@@ -187,7 +187,7 @@ def parse_report(text: str) -> Optional[dict]:
     result = {}
 
     # Общий результат
-    m = re.search(r"Общий результат:\s*(\d+)\s*из\s*100\s*\((\w+)\)", text)
+    m = re.search(r"Общий результат:\s*(\d+)\s*из\s*100\s*\(([^)]+)\)", text)
     if not m:
         return None
     result["total"] = int(m.group(1))
